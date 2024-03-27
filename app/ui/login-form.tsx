@@ -9,7 +9,7 @@ import {
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 import { useFormState, useFormStatus } from 'react-dom';
-import { authenticate } from '../lib/actions';
+import { authenticate } from '@/app/lib/actions';
 
 export default function LoginForm() {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
@@ -73,9 +73,6 @@ export default function LoginForm() {
               <p className="text-sm text-red-500">{errorMessage}</p>
             </>
           )}
-        </div>
-        <div className="flex h-8 items-end space-x-1">
-          {/* Add form errors here */}
         </div>
       </div>
     </form>
